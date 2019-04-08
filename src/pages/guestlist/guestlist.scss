@@ -1,0 +1,23 @@
+page-guestlist {
+
+  .welcome{
+    color: #264199;
+  }
+
+  .item-avatar  {
+    width:100% !important;
+    height : 100% !important;
+    max-width: 100px !important;  //any size
+    max-height: 100px !important; //any size
+  }
+
+  .fields {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    max-width: 50% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}

@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center color="light">Guests List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-card *ngFor="let guest of guestList">
+      <ion-card-header class="welcome">
+        {{ guest.guestName }}
+      </ion-card-header>
+      <ion-card-content>
+        Visiting: {{ guest.hostName }}
+        <br>
+        Location: {{ guest.country + ',' + guest.zipcode }}
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

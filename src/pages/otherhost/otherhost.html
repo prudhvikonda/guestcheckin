@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center color="light">Welcome to Cardlytics</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-light">
+
+  <form #f="ngForm" (ngSubmit)="navigateToGuestImage(f)">
+
+    <ion-grid>
+
+      <ion-row>
+        <ion-col col-12>&nbsp;</ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12>&nbsp;</ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12>
+          <h5 class="center welcome">Please enter the Cardlytics employee name whom you are visiting</h5>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+    <ion-list>
+
+      <ion-item class="fields">
+        <ion-input type="text" placeholder="Employee Full Name" ngModel name="hostName" required></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-grid>
+
+      <ion-row>
+        <ion-col col-12>&nbsp;</ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12>
+          <div class="center">
+            <button ion-button round type="submit" [disabled]="!f.valid">Next</button>
+          </div>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+  </form>
+
+</ion-content>

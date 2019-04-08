@@ -1,0 +1,70 @@
+<ion-header>
+
+  <ion-header>
+
+    <ion-navbar>
+      <ion-title text-center color="light">Welcome to Cardlytics</ion-title>
+    </ion-navbar>
+
+  </ion-header>
+
+</ion-header>
+
+
+<ion-content padding class="bg-light">
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col col-12>&nbsp;</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>&nbsp;</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+
+          <ion-card class="fields">
+            <ion-grid>
+              <ion-row>
+                <ion-col col-6>
+                  <ion-item text-center>
+                    <img src="{{ imageURL }}">
+                  </ion-item>
+                </ion-col>
+                <ion-col col-6>
+                  <ion-card-content>
+                    <ion-card-title>
+                      {{ guest?.guestName }}
+                    </ion-card-title>
+                    <p>Visiting: {{ guest?.hostName }}</p>
+                  </ion-card-content>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+
+          <ion-card class="fields">
+            <ion-card-content>
+              Meeting at {{ showCheckinTime() }}
+            </ion-card-content>
+          </ion-card>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <div class="center">
+          <button ion-button round type="submit" (click)="navigateToFinish()">Finish Check-in</button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
