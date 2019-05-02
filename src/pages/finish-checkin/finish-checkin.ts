@@ -56,6 +56,7 @@ export class FinishCheckinPage {
     var d = this.guestSrvc.getGuest().checkinDate;
     var bodyJson = [{
       'name': this.guestSrvc.getGuest().guestName,
+      'company': this.guestSrvc.getGuest().company,
       'datetm': d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds(),
       'employee': this.guestSrvc.getGuest().hostName,
       'office': this.guestSrvc.getGuest().country
@@ -89,10 +90,11 @@ export class FinishCheckinPage {
       orientation: 'landscape',
       monochrome: false,
       photo: true,
+      /*
       paper: {
         width: '6.09cm',
         height: '9.90cm'
-      },
+      },*/
       margin: {
         top: '18pt',
         bottom: '9pt',

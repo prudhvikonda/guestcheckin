@@ -4,7 +4,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { NativeGeocoder } from '@ionic-native/native-geocoder';
 import { Camera } from '@ionic-native/camera';
 import { Printer } from '@ionic-native/printer';
-import { BackgroundMode } from "@ionic-native/background-mode";
+//import { BackgroundMode } from "@ionic-native/background-mode";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IonicStorageModule } from '@ionic/storage';
@@ -68,7 +68,7 @@ import { GuestService } from "../services/guest.service";
     Printer,
     File,
     HTTP,
-    BackgroundMode,
+    //BackgroundMode,
     GuestService
   ]
 })
