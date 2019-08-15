@@ -44,7 +44,7 @@ export class FinishCheckinPage {
       this.guestSrvc.saveGuest();
       this.http.setDataSerializer('json');
       await this.printer.print(this.getContentForPrinting(), this.getPrintOptions());
-      await this.http.put('http://p1w02opus10db/in/', this.getBodyJsonToPost(), {'Content-Type' : 'application/json'});
+      //await this.http.put('http://blahblah/in/', this.getBodyJsonToPost(), {'Content-Type' : 'application/json'});
       setTimeout(() => { this.navCtrl.popToRoot() }, 2000);
     } catch(error) {
       alert('ERROR:' + JSON.stringify(error));
@@ -54,10 +54,11 @@ export class FinishCheckinPage {
 
   getBodyJsonToPost() {
     var d = this.guestSrvc.getGuest().checkinDate;
+    var month = d.getMonth() + 1;
     var bodyJson = [{
       'name': this.guestSrvc.getGuest().guestName,
       'company': this.guestSrvc.getGuest().company,
-      'datetm': d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds(),
+      'datetm': d.getFullYear() + '-' + month + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds(),
       'employee': this.guestSrvc.getGuest().hostName,
       'office': this.guestSrvc.getGuest().country
     }];
